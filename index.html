@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fruit Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="app">
+    <h1>🍓Fruits and Vegetables Classifier</h1>
+    <p class="subtitle">CNN-based Image Classification</p>
+
+    <div class="card">
+        <input type="file" id="imageInput" accept="image/*" onchange="previewImage()">
+
+        <div class="image-box">
+            <img id="preview" src="" alt="Image Preview">
+        </div>
+
+        <button onclick="uploadImage()">Predict Fruit</button>
+
+        <p id="status"></p>
+        <div id="result"></div>
+    </div>
+
+    <footer>
+        Team Jabbar
+    </footer>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
